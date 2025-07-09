@@ -2133,3 +2133,4 @@ function library:AddWindow(title, options)
 			end
 		end
 	end
+return library
