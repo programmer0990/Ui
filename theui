@@ -2133,3 +2133,15 @@ function library:AddWindow(title, options)
 			end
 		end
 	end
+
+	do
+		for i, v in next, Window:GetDescendants() do
+			if hasprop(v, "ZIndex") then
+				v.ZIndex = v.ZIndex + (windows * 10)
+			end
+		end
+	end
+
+	return window_data, Window
+end
+return library
